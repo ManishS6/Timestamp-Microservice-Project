@@ -43,7 +43,7 @@ app.get("/api/timestamp/:date_string",(req,res)=>{
   } else {
     let DateS = new Date(DateString);
     let unixTime = new Date(DateString).valueOf();
-    if(DateS === "Invalid Date"){
+    if(DateS.toString() === "Invalid Date"){
       res.json({
         error: "Invalid Date"
       });
