@@ -33,7 +33,7 @@ app.get("/api/timestamp/",(req,res)=>{
 
 app.get("/api/timestamp/:date_string",(req,res)=>{
   let DateString = req.params.date_string;
-  console.log(DateString);
+  // console.log(DateString);
   if(/\d{5,}/.test(DateString)){
     let unixTime = parseInt(DateString);
     res.json({
